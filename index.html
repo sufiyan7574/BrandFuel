@@ -3,705 +3,447 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ============================================================
-  BRANDFUEL — official website
-  Single-file production build (HTML/CSS/JS, no framework deps)
-  Replace CONFIG values in the <script id="bf-config"> block below
-  before going live: domain, WhatsApp number, social URLs.
-============================================================= -->
-
-<title>BrandFuel — Fueling Brands For Growth | Performance Marketing, Marketplace &amp; Technology Partner</title>
-<meta name="description" content="BrandFuel is a founder-led growth and digital transformation partner — performance marketing, marketplace growth, influencer marketing, technology and SEO/AEO, built by an operator who has run his own D2C brand.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://brandfuelgrowth.com/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="BrandFuel">
-<meta property="og:title" content="BrandFuel — Fueling Brands For Growth">
-<meta property="og:description" content="Performance marketing, marketplace growth, influencer marketing and technology — built around how your business actually operates. Founder-led by Sufiyan Makwani.">
-<meta property="og:url" content="https://brandfuelgrowth.com/">
-<meta property="og:image" content="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BrandFuel — Fueling Brands For Growth">
-<meta name="twitter:description" content="A founder-led growth and digital transformation partner for ambitious brands.">
-<meta name="twitter:image" content="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg">
-
+<title>BrandFuel — Fueling Brands For Growth</title>
+<meta name="description" content="BrandFuel is a founder-led growth and digital transformation partner — performance marketing, marketplace growth, influencer marketing, technology and SEO/AEO.">
 <link rel="icon" href="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Archivo+Expanded:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<!-- Schema.org structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "BrandFuel",
-  "url": "https://brandfuelgrowth.com/",
-  "logo": "https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg",
-  "description": "BrandFuel is a founder-led growth and digital transformation partner offering performance marketing, marketplace growth, influencer marketing, technology and SEO/AEO services.",
-  "founder": {
-    "@type": "Person",
-    "name": "Sufiyan Makwani",
-    "jobTitle": "Founder",
-    "description": "Entrepreneur and D2C growth strategist. Founder and operator of EinayaCollection, a self-built D2C fashion brand.",
-    "sameAs": [
-      "https://www.instagram.com/einayacollection",
-      "https://www.linkedin.com/",
-      "https://www.facebook.com/"
-    ]
-  },
-  "sameAs": [
-    "https://www.instagram.com/einayacollection"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Growth &amp; Digital Transformation Services",
-  "provider": { "@type": "Organization", "name": "BrandFuel" },
-  "areaServed": "IN",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "BrandFuel Services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketplace Growth" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Influencer Marketing" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom ERP & Business Software" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Android App Development" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO — Answer Engine Optimization" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategic Growth Consulting" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing Mentorship" } }
-    ]
-  }
-}
-</script>
-
 <style>
-/* ============ TOKENS ============ */
 :root{
-  --bg:#0a0a09;
-  --bg-alt:#111110;
-  --panel:#151513;
-  --line:#2b2a26;
-  --line-soft:#1e1d1a;
-  --text:#f2efe6;
-  --text-dim:#9c988c;
-  --text-faint:#6b675e;
-  --orange:#ff5a1f;
-  --orange-deep:#c43e10;
-  --orange-tint:rgba(255,90,31,.14);
-  --mono:'IBM Plex Mono',monospace;
-  --sans:'Inter',sans-serif;
-  --disp:'Archivo Expanded','Archivo',sans-serif;
-  --disp2:'Archivo',sans-serif;
-  --maxw:1240px;
-  --pad:clamp(20px,5vw,64px);
-  --headerH:76px;
-  --ease:cubic-bezier(.16,.8,.4,1);
+  --bg:#070706;--bg-raised:#0c0c0b;--surface:#131311;--surface-hover:#1a1a17;
+  --border:rgba(255,255,255,0.06);--border-hover:rgba(255,90,31,0.25);
+  --text:#f2efe6;--text-dim:#9c988c;--text-faint:#5c574e;
+  --orange:#ff5a1f;--orange-soft:rgba(255,90,31,0.12);--orange-glow:rgba(255,90,31,0.4);
+  --mono:'IBM Plex Mono',monospace;--sans:'Inter',sans-serif;
+  --disp:'Archivo Expanded','Archivo',sans-serif;--disp2:'Archivo',sans-serif;
+  --maxw:1280px;--pad:clamp(20px,5vw,64px);--headerH:76px;
+  --ease:cubic-bezier(.16,.8,.4,1);--ease-out:cubic-bezier(.22,1,.36,1);
 }
 @media (max-width:899px){:root{--headerH:64px}}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;width:100%;overflow-x:hidden}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--sans);
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-  width:100%;
-  overflow-x:hidden;
-  position:relative;
-}
-body.menu-open{overflow:hidden;height:100vh}
+html{scroll-behavior:smooth;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:none}
+@media (pointer:coarse){body{cursor:auto}}
+::selection{background:var(--orange);color:#000}
+
+/* Noise */
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat;background-size:200px}
+
+/* Cursor */
+.cursor-wrap{position:fixed;inset:0;pointer-events:none;z-index:10000}
+.cursor{position:fixed;width:40px;height:40px;border:1px solid rgba(255,90,31,0.5);border-radius:50%;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),border-color .3s,border-radius .3s;mix-blend-mode:difference}
+.cursor-dot{position:fixed;width:6px;height:6px;background:var(--orange);border-radius:50%;transform:translate(-50%,-50%);transition:transform .15s ease-out,opacity .3s}
+.cursor.hover{width:60px;height:60px;border-color:var(--orange);background:rgba(255,90,31,0.05)}
+.cursor.hover~.cursor-dot{opacity:0}
+@media (pointer:coarse){.cursor-wrap{display:none}}
+
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);width:100%}
-:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
-.eyebrow{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--orange);
-  display:flex;align-items:center;gap:10px;
-  margin-bottom:18px;
-}
-.eyebrow::before{content:'';width:24px;height:1px;background:var(--orange)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--orange);opacity:.6}
 
-h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:-.01em;line-height:1.04}
-.h1{font-size:clamp(38px,6.4vw,84px)}
-.h2{font-size:clamp(28px,4.2vw,50px)}
-.h3{font-size:clamp(19px,2.2vw,26px);font-family:var(--disp2);font-weight:700}
-p.lead{font-size:clamp(16px,1.9vw,19px);color:var(--text-dim);max-width:640px}
-.section{padding:clamp(64px,10vw,128px) 0;border-top:1px solid var(--line-soft)}
-.section-head{display:flex;flex-direction:column;gap:20px;margin-bottom:56px}
+h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.h1{font-size:clamp(40px,7vw,90px)}
+.h2{font-size:clamp(30px,4.5vw,52px)}
+.h3{font-size:clamp(20px,2.4vw,28px);font-family:var(--disp2);font-weight:700}
+p.lead{font-size:clamp(16px,1.8vw,19px);color:var(--text-dim);max-width:640px;line-height:1.65}
 
-.btn{
-  font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  max-width:100%;
-  padding:14px 24px;border:1px solid var(--text);border-radius:2px;
-  transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease;
-  white-space:normal;text-align:center;
-}
-.btn-solid{background:var(--orange);border-color:var(--orange);color:#0a0a09;font-weight:600}
-.btn-solid:hover{background:#ff7a45;border-color:#ff7a45;transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(255,90,31,.55)}
-.btn-ghost:hover{background:var(--text);color:var(--bg);transform:translateY(-2px)}
-.btn-arrow{transition:transform .25s ease}
-.btn:hover .btn-arrow{transform:translateX(4px)}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;max-width:100%}
-@media (max-width:480px){
-  .cta-row{flex-direction:column;align-items:stretch}
-  .btn{width:100%;font-size:12px;padding:14px 18px}
-}
+.section{padding:clamp(80px,11vw,140px) 0}
+.section-head{display:flex;flex-direction:column;gap:18px;margin-bottom:64px}
 
-/* ============ NAV ============ */
-header{
-  position:fixed;top:0;left:0;right:0;z-index:250;
-  background:rgba(10,10,9,.86);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line-soft);
-  height:var(--headerH);
-}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border:1px solid rgba(255,255,255,0.15);border-radius:2px;transition:all .35s var(--ease);position:relative;overflow:hidden;white-space:nowrap}
+.btn::before{content:'';position:absolute;inset:0;background:var(--orange);transform:translateY(100%);transition:transform .4s var(--ease);z-index:-1}
+.btn:hover::before{transform:translateY(0)}
+.btn:hover{border-color:var(--orange);color:#000}
+.btn-solid{background:var(--orange);border-color:var(--orange);color:#000;font-weight:600}
+.btn-solid::before{background:#ff7a45}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(255,90,31,.5)}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+.btn-ghost:hover::before{display:none}
+.btn-arrow{transition:transform .3s var(--ease)}
+.btn:hover .btn-arrow{transform:translateX(5px)}
+.cta-row{display:flex;flex-wrap:wrap;gap:16px}
+@media (max-width:480px){.cta-row{flex-direction:column;align-items:stretch}.btn{width:100%;justify-content:center;font-size:11px;padding:16px 20px}}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:250;height:var(--headerH);background:rgba(7,7,6,.75);backdrop-filter:blur(16px) saturate(1.2);border-bottom:1px solid var(--border);transition:background .3s,border-color .3s}
+header.scrolled{background:rgba(7,7,6,.92);border-color:rgba(255,255,255,0.1)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:var(--headerH)}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{height:26px;width:auto}
-@media (min-width:900px){.brand img{height:30px}}
-.brand span{font-family:var(--disp);font-weight:800;font-size:17px;letter-spacing:.02em}
-.navlinks{display:flex;align-items:center;gap:34px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
-.navlinks a{color:var(--text-dim);position:relative;padding:4px 0}
+.brand img{height:28px;width:auto;border-radius:2px}
+.brand span{font-family:var(--disp);font-weight:800;font-size:18px;letter-spacing:.02em}
+.navlinks{display:flex;align-items:center;gap:40px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.navlinks a{color:var(--text-dim);position:relative;padding:4px 0;transition:color .3s}
 .navlinks a:hover{color:var(--text)}
-.navlinks a::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--orange);transition:width .25s ease}
+.navlinks a::after{content:'';position:absolute;left:0;bottom:-2px;height:1.5px;width:0;background:var(--orange);transition:width .35s var(--ease)}
 .navlinks a:hover::after{width:100%}
 .nav-cta{display:none}
 
-/* burger morphs into an X */
-.burger{
-  display:none;position:relative;flex-direction:column;justify-content:center;align-items:center;
-  gap:6px;width:34px;height:34px;cursor:pointer;background:none;border:0;flex-shrink:0;z-index:260;
-}
-.burger span{height:1.5px;background:var(--text);width:22px;transition:transform .35s var(--ease),opacity .25s ease,background .25s ease}
+.burger{display:none;position:relative;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:40px;height:40px;cursor:pointer;background:none;border:0;flex-shrink:0;z-index:260}
+.burger span{height:1.5px;background:var(--text);width:24px;transition:all .4s var(--ease);transform-origin:center}
 .burger.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg);background:var(--orange)}
-.burger.active span:nth-child(2){opacity:0}
+.burger.active span:nth-child(2){opacity:0;transform:scaleX(0)}
 .burger.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);background:var(--orange)}
 
-/* full-screen mobile nav overlay */
-.mobile-menu{
-  position:fixed;inset:0;background:var(--bg);z-index:240;
-  display:flex;flex-direction:column;justify-content:space-between;
-  padding:0 var(--pad) clamp(28px,6vw,48px);
-  opacity:0;visibility:hidden;transform:translateY(-12px);
-  transition:opacity .4s var(--ease),transform .45s var(--ease),visibility 0s linear .45s;
-  overflow-y:auto;
-}
-.mobile-menu.open{
-  opacity:1;visibility:visible;transform:none;
-  transition:opacity .4s var(--ease),transform .45s var(--ease),visibility 0s linear 0s;
-}
-.mm-top{display:flex;align-items:center;justify-content:space-between;height:var(--headerH);flex-shrink:0;border-bottom:1px solid var(--line-soft)}
-.mm-top img{height:26px}
-.mm-links{display:flex;flex-direction:column;justify-content:center;flex:1;padding:12px 0}
-.mm-links a{
-  display:flex;align-items:baseline;gap:16px;
-  font-family:var(--disp);font-size:clamp(28px,8vw,42px);font-weight:800;
-  padding:14px 0;border-bottom:1px solid var(--line-soft);
-  opacity:0;transform:translateY(16px);
-  transition:opacity .5s var(--ease),transform .5s var(--ease),color .2s ease;
-}
-.mobile-menu.open .mm-links a{opacity:1;transform:none}
-.mobile-menu.open .mm-links a:nth-child(1){transition-delay:.08s}
-.mobile-menu.open .mm-links a:nth-child(2){transition-delay:.14s}
-.mobile-menu.open .mm-links a:nth-child(3){transition-delay:.20s}
-.mobile-menu.open .mm-links a:nth-child(4){transition-delay:.26s}
-.mobile-menu.open .mm-links a:nth-child(5){transition-delay:.32s}
-.mm-links a .mm-num{font-family:var(--mono);font-size:14px;font-weight:400;color:var(--orange)}
+.mobile-menu{position:fixed;inset:0;background:var(--bg);z-index:240;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:var(--pad);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
+.mobile-menu.active{opacity:1;visibility:visible}
+.mobile-menu::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,90,31,0.08),transparent 60%);pointer-events:none}
+.mm-links{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;max-width:400px}
+.mm-links a{display:flex;align-items:center;gap:16px;width:100%;justify-content:center;font-family:var(--disp);font-size:clamp(32px,9vw,48px);font-weight:800;padding:16px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(30px);transition:opacity .6s var(--ease),transform .6s var(--ease),color .3s}
+.mobile-menu.active .mm-links a{opacity:1;transform:translateY(0)}
+.mobile-menu.active .mm-links a:nth-child(1){transition-delay:.1s}
+.mobile-menu.active .mm-links a:nth-child(2){transition-delay:.18s}
+.mobile-menu.active .mm-links a:nth-child(3){transition-delay:.26s}
+.mobile-menu.active .mm-links a:nth-child(4){transition-delay:.34s}
+.mobile-menu.active .mm-links a:nth-child(5){transition-delay:.42s}
+.mm-links a .mm-num{font-family:var(--mono);font-size:14px;font-weight:400;color:var(--orange);opacity:.7}
 .mm-links a:hover{color:var(--orange)}
-.mobile-menu .cta-row{
-  opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease) .38s,transform .5s var(--ease) .38s;
-}
-.mobile-menu.open .cta-row{opacity:1;transform:none}
+.mm-cta{margin-top:40px;opacity:0;transform:translateY(20px);transition:all .6s var(--ease) .5s}
+.mobile-menu.active .mm-cta{opacity:1;transform:translateY(0)}
 
-@media (min-width:900px){
-  .navlinks{display:flex}
-  .nav-cta{display:inline-flex}
-  .burger{display:none}
-  .mobile-menu{display:none !important}
-}
-@media (max-width:899px){
-  .navlinks{display:none}
-  .nav-cta{display:none}
-  .burger{display:flex}
-}
+@media (min-width:900px){.navlinks{display:flex}.nav-cta{display:inline-flex}.burger{display:none}.mobile-menu{display:none!important}}
+@media (max-width:899px){.navlinks{display:none}.nav-cta{display:none}.burger{display:flex}}
 
-/* ============ HERO ============ */
-.hero{padding-top:calc(var(--headerH) + clamp(32px,8vw,96px));padding-bottom:clamp(48px,8vw,96px);position:relative}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
-.hero-copy .eyebrow{margin-bottom:26px}
-.hero h1{margin-bottom:26px}
+/* HERO */
+.hero{padding-top:calc(var(--headerH) + clamp(40px,10vw,120px));padding-bottom:clamp(60px,10vw,120px);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,90,31,0.12),transparent 70%);filter:blur(80px);pointer-events:none;animation:pulse 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;bottom:-10%;left:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,90,31,0.06),transparent 70%);filter:blur(60px);pointer-events:none}
+@keyframes pulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:1}
+.hero-copy .eyebrow{margin-bottom:28px}
+.hero h1{margin-bottom:28px}
 .hero h1 em{font-style:normal;color:var(--orange)}
-.hero .lead{margin-bottom:36px}
+.hero .lead{margin-bottom:40px}
 
-/* load-in sequence: fires once on page load, independent of scroll */
-.hero-copy .eyebrow,.hero-copy h1,.hero-copy .lead,.hero-copy .cta-row,.hero-frame{
-  opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);
-}
-.hero-frame{transform:translateY(28px) scale(1.02)}
-body.page-ready .hero-copy .eyebrow{opacity:1;transform:none;transition-delay:.05s}
-body.page-ready .hero-copy h1{opacity:1;transform:none;transition-delay:.16s}
-body.page-ready .hero-copy .lead{opacity:1;transform:none;transition-delay:.30s}
-body.page-ready .hero-copy .cta-row{opacity:1;transform:none;transition-delay:.42s}
-body.page-ready .hero-frame{opacity:1;transform:none;transition-delay:.22s}
+.hero-frame{position:relative;border:1px solid var(--border);aspect-ratio:1/1;overflow:hidden;background:var(--surface);width:100%}
+.hero-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,90,31,0.08),transparent 50%);z-index:1;pointer-events:none}
+.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:grayscale(25%) contrast(1.08);transition:transform 8s ease,filter .6s}
+.hero-frame:hover img{transform:scale(1.03);filter:grayscale(10%) contrast(1.1)}
+.frame-mark{position:absolute;width:24px;height:24px;border-color:var(--orange);border-style:solid;border-width:0;z-index:2;opacity:.7}
+.frame-mark.tl{top:16px;left:16px;border-top-width:2px;border-left-width:2px}
+.frame-mark.br{bottom:16px;right:16px;border-bottom-width:2px;border-right-width:2px}
+.frame-tag{position:absolute;left:0;bottom:0;right:0;z-index:2;background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,transparent 100%);padding:30px 20px 18px;display:flex;justify-content:space-between;align-items:flex-end}
+.frame-tag .name{font-family:var(--disp2);font-weight:700;font-size:16px}
+.frame-tag .role{font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+.frame-tag .idnum{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:.04em}
 
-.hero-frame{
-  position:relative;border:1px solid var(--line);
-  aspect-ratio:1/1;overflow:hidden;background:var(--panel);
-  width:100%;
-}
-.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:grayscale(28%) contrast(1.05)}
-.frame-mark{position:absolute;width:18px;height:18px;border-color:var(--orange);border-style:solid;border-width:0}
-.frame-mark.tl{top:12px;left:12px;border-top-width:2px;border-left-width:2px}
-.frame-mark.br{bottom:12px;right:12px;border-bottom-width:2px;border-right-width:2px}
-.frame-tag{
-  position:absolute;left:0;bottom:0;right:0;
-  background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);
-  padding:26px 18px 16px;display:flex;justify-content:space-between;align-items:flex-end;
-}
-.frame-tag .name{font-family:var(--disp2);font-weight:700;font-size:15px}
-.frame-tag .role{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
-.frame-tag .idnum{font-family:var(--mono);font-size:10.5px;color:var(--orange)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-frame{order:-1;aspect-ratio:1/1;margin-bottom:16px;max-width:480px;margin-left:auto;margin-right:auto}}
+@media (max-width:420px){.hero-frame{aspect-ratio:4/5}}
 
-@media (max-width:860px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-frame{order:-1;aspect-ratio:1/1;margin-bottom:12px;max-width:520px;margin-left:auto;margin-right:auto}
-}
-@media (max-width:420px){
-  .hero-frame{aspect-ratio:4/5}
-}
-
-/* ============ STATS STRIP ============ */
-.stats{background:var(--bg-alt)}
-.stats-top{font-family:var(--disp2);font-weight:800;font-size:clamp(20px,2.6vw,30px);margin-bottom:44px;max-width:620px}
+/* STATS */
+.stats{background:var(--bg-raised);position:relative}
+.stats::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.stats-top{font-family:var(--disp2);font-weight:800;font-size:clamp(22px,2.8vw,32px);margin-bottom:52px;max-width:640px;line-height:1.2}
 .stats-top span{color:var(--orange)}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.stat{padding:30px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stat .num{font-family:var(--disp);font-size:clamp(28px,3.4vw,42px);font-weight:800;color:var(--text)}
-.stat .num sup{color:var(--orange);font-size:.5em;top:-1.4em}
-.stat .lbl{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;margin-top:8px;text-transform:uppercase;line-height:1.4}
-.gauge{height:2px;background:var(--line);margin-top:16px;position:relative}
-.gauge i{position:absolute;left:0;top:0;height:100%;background:var(--orange);display:block}
-@media (max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.stat-grid::before{content:'';position:absolute;inset:0;border:1px solid var(--border);pointer-events:none;z-index:1}
+.stat{padding:36px 28px;position:relative}
+.stat:not(:last-child){border-right:1px solid var(--border)}
+.stat .num{font-family:var(--disp);font-size:clamp(32px,3.8vw,48px);font-weight:800;color:var(--text);line-height:1}
+.stat .num sup{color:var(--orange);font-size:.45em;top:-1.2em;font-weight:700}
+.stat .lbl{font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:.06em;margin-top:12px;text-transform:uppercase;line-height:1.5}
+.stat .bar{height:2px;background:rgba(255,255,255,0.06);margin-top:20px;position:relative;overflow:hidden}
+.stat .bar::after{content:'';position:absolute;left:0;top:0;height:100%;width:0;background:var(--orange);transition:width 1.2s var(--ease-out)}
+.stat.in .bar::after{width:var(--w)}
 
-/* ============ ABOUT / FOUNDER ============ */
-.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,80px)}
-.about-copy p{color:var(--text-dim);margin-bottom:18px;max-width:560px}
-.about-copy p:first-of-type{color:var(--text);font-size:18px}
-.pull{
-  border-left:2px solid var(--orange);padding-left:20px;margin:30px 0;
-  font-family:var(--disp2);font-size:clamp(18px,2vw,22px);font-weight:700;line-height:1.35;
-}
+@media (max-width:760px){.stat-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--border)}}
+
+/* ABOUT */
+.about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,6vw,80px);align-items:start}
+.about-copy p{color:var(--text-dim);margin-bottom:20px;max-width:580px;font-size:16px;line-height:1.7}
+.about-copy p:first-of-type{color:var(--text);font-size:19px;line-height:1.6}
+.pull{border-left:2.5px solid var(--orange);padding-left:24px;margin:36px 0;font-family:var(--disp2);font-size:clamp(19px,2.2vw,24px);font-weight:700;line-height:1.4;color:var(--text)}
 @media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
 
-/* ============ SERVICES ============ */
-.svc-list{border-top:1px solid var(--line)}
-.svc-item{border-bottom:1px solid var(--line)}
-.svc-head{
-  display:flex;align-items:center;gap:22px;padding:26px 0;cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
-}
-.svc-num{font-family:var(--mono);color:var(--orange);font-size:13px;min-width:32px}
-.svc-title{font-family:var(--disp2);font-weight:700;font-size:clamp(18px,2.2vw,26px);flex:1}
-.svc-pos{font-family:var(--sans);color:var(--text-dim);font-size:14px;display:none;flex:1}
-.svc-plus{font-family:var(--mono);font-size:20px;color:var(--text-dim);transition:transform .3s ease}
-.svc-item.open .svc-plus{transform:rotate(45deg);color:var(--orange)}
-.svc-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.svc-body-in{display:grid;grid-template-columns:32px 1fr 1fr;gap:22px;padding-bottom:30px}
-.svc-body-in .fill{}
-.svc-tagline{font-family:var(--disp2);font-size:16px;color:var(--text);margin-bottom:14px;font-weight:700}
-.svc-tags{display:flex;flex-wrap:wrap;gap:8px 10px}
-.svc-tags span{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);border:1px solid var(--line);padding:6px 10px}
-@media (max-width:760px){
-  .svc-pos{display:none !important}
-  .svc-body-in{grid-template-columns:32px 1fr}
-}
+/* SERVICES */
+.svc-list{border-top:1px solid var(--border)}
+.svc-item{border-bottom:1px solid var(--border);transition:background .3s}
+.svc-item:hover{background:var(--surface-hover)}
+.svc-head{display:flex;align-items:center;gap:24px;padding:28px 0;cursor:pointer;-webkit-tap-highlight-color:transparent;position:relative}
+.svc-num{font-family:var(--mono);color:var(--orange);font-size:13px;min-width:36px;opacity:.8}
+.svc-title{font-family:var(--disp2);font-weight:700;font-size:clamp(20px,2.4vw,28px);flex:1;letter-spacing:-.01em}
+.svc-pos{font-family:var(--sans);color:var(--text-dim);font-size:15px;flex:1;display:none}
+.svc-icon{width:36px;height:36px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease);position:relative}
+.svc-icon::before,.svc-icon::after{content:'';position:absolute;background:var(--text-dim);transition:all .4s var(--ease)}
+.svc-icon::before{width:14px;height:1.5px}
+.svc-icon::after{width:1.5px;height:14px}
+.svc-item.open .svc-icon{border-color:var(--orange);transform:rotate(45deg)}
+.svc-item.open .svc-icon::before,.svc-item.open .svc-icon::after{background:var(--orange)}
+.svc-body{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.svc-body-in{display:grid;grid-template-columns:36px 1fr 1fr;gap:28px;padding-bottom:36px}
+.svc-tagline{font-family:var(--disp2);font-size:17px;color:var(--text);margin-bottom:16px;font-weight:700;line-height:1.4}
+.svc-tags{display:flex;flex-wrap:wrap;gap:10px}
+.svc-tags span{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);border:1px solid var(--border);padding:7px 12px;border-radius:2px;transition:all .3s}
+.svc-tags span:hover{border-color:var(--border-hover);color:var(--text)}
+@media (max-width:760px){.svc-pos{display:none!important}.svc-body-in{grid-template-columns:36px 1fr}.svc-head{padding:22px 0}}
 
-/* ============ ENGAGEMENT MODELS ============ */
-.model-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.model{padding:34px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;min-height:230px}
-.model:hover{background:var(--panel)}
-.model .tag{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:.08em;margin-bottom:14px}
-.model h3{margin-bottom:12px}
-.model p{color:var(--text-dim);font-size:14px;flex:1}
+/* MODELS */
+.model-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.model{padding:40px 30px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;flex-direction:column;min-height:260px;transition:all .4s var(--ease);position:relative;overflow:hidden}
+.model::before{content:'';position:absolute;inset:0;background:var(--surface);opacity:0;transition:opacity .4s;z-index:-1}
+.model:hover::before{opacity:1}
+.model:hover{border-color:rgba(255,90,31,0.15);transform:translateY(-4px)}
+.model .tag{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:.1em;margin-bottom:16px}
+.model h3{margin-bottom:14px;line-height:1.25}
+.model p{color:var(--text-dim);font-size:14.5px;flex:1;line-height:1.65}
 @media (max-width:920px){.model-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.model-grid{grid-template-columns:1fr}}
 
-/* ============ CASE STUDY ============ */
-.case{background:var(--bg-alt)}
-.case-card{border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
-.case-info{padding:clamp(28px,4vw,56px)}
-.case-visual{
-  background:
-    repeating-linear-gradient(135deg, transparent 0 24px, rgba(255,90,31,.05) 24px 25px),
-    var(--panel);
-  border-left:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;min-height:280px;padding:40px;position:relative;
-}
-.case-visual .cs-mark{font-family:var(--disp);font-size:clamp(30px,5vw,54px);font-weight:900;color:var(--text);opacity:.9;letter-spacing:-.02em;text-align:center}
-.case-visual .cs-sub{position:absolute;bottom:24px;left:24px;font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:.06em}
-.case-tag{font-family:var(--mono);font-size:11.5px;color:var(--orange);letter-spacing:.08em;margin-bottom:16px}
-.case-focus{display:flex;flex-wrap:wrap;gap:8px 10px;margin:22px 0 28px}
-.case-focus span{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);border:1px solid var(--line);padding:6px 10px}
-@media (max-width:760px){.case-card{grid-template-columns:1fr}.case-visual{border-left:0;border-top:1px solid var(--line)}}
+/* CASE STUDY */
+.case{background:var(--bg-raised);position:relative}
+.case::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.case-card{border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.case-info{padding:clamp(36px,5vw,64px)}
+.case-visual{background:repeating-linear-gradient(135deg,transparent 0 28px,rgba(255,90,31,.04) 28px 29px),var(--surface);border-left:1px solid var(--border);display:flex;align-items:center;justify-content:center;min-height:320px;padding:48px;position:relative}
+.case-visual .cs-mark{font-family:var(--disp);font-size:clamp(36px,5.5vw,60px);font-weight:900;color:var(--text);opacity:.85;letter-spacing:-.02em;text-align:center;text-shadow:0 0 80px rgba(255,90,31,0.15)}
+.case-visual .cs-sub{position:absolute;bottom:28px;left:28px;font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:.08em}
+.case-tag{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:.08em;margin-bottom:18px}
+.case-focus{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 32px}
+.case-focus span{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);border:1px solid var(--border);padding:7px 12px;border-radius:2px}
+@media (max-width:760px){.case-card{grid-template-columns:1fr}.case-visual{border-left:0;border-top:1px solid var(--border);min-height:240px}}
 
-/* ============ EINAYA ============ */
-.einaya{border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;background:var(--bg-alt)}
-.einaya-copy{padding:clamp(28px,4vw,56px)}
-.einaya-stats{display:flex;gap:36px;margin:26px 0 30px;flex-wrap:wrap}
-.einaya-stats div .num{font-family:var(--disp);font-size:26px;font-weight:800;color:var(--orange)}
-.einaya-stats div .lbl{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);text-transform:uppercase;margin-top:4px}
-.einaya-visual{border-left:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:40px;position:relative;overflow:hidden}
-.einaya-visual::before{content:'EC';font-family:var(--disp);font-size:min(22vw,220px);font-weight:900;color:var(--panel);position:absolute;letter-spacing:-.05em}
-.einaya-visual .live{position:relative;font-family:var(--mono);font-size:12px;color:var(--text);border:1px solid var(--orange);padding:10px 16px;background:rgba(10,10,9,.7)}
-@media (max-width:760px){.einaya{grid-template-columns:1fr}.einaya-visual{border-left:0;border-top:1px solid var(--line);min-height:180px}}
+/* EINAYA */
+.einaya{border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;background:var(--bg-raised);overflow:hidden}
+.einaya-copy{padding:clamp(36px,5vw,64px)}
+.einaya-stats{display:flex;gap:48px;margin:32px 0 36px;flex-wrap:wrap}
+.einaya-stats div .num{font-family:var(--disp);font-size:28px;font-weight:800;color:var(--orange);line-height:1}
+.einaya-stats div .lbl{font-family:var(--mono);font-size:11px;color:var(--text-dim);text-transform:uppercase;margin-top:6px;letter-spacing:.04em}
+.einaya-visual{border-left:1px solid var(--border);display:flex;align-items:center;justify-content:center;padding:48px;position:relative;overflow:hidden}
+.einaya-visual::before{content:'EC';font-family:var(--disp);font-size:min(22vw,240px);font-weight:900;color:rgba(255,255,255,0.02);position:absolute;letter-spacing:-.05em;user-select:none}
+.einaya-visual .live{position:relative;font-family:var(--mono);font-size:12px;color:var(--text);border:1px solid var(--orange);padding:12px 20px;background:rgba(10,10,9,.8);backdrop-filter:blur(4px);letter-spacing:.04em}
+@media (max-width:760px){.einaya{grid-template-columns:1fr}.einaya-visual{border-left:0;border-top:1px solid var(--border);min-height:200px}}
 
-/* ============ MENTORSHIP ============ */
-.mentor{background:linear-gradient(180deg,var(--bg-alt),var(--bg))}
-.mentor .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px)}
-.mentor-topics{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);align-self:start}
-.mentor-topics span{
-  font-family:var(--mono);font-size:12.5px;color:var(--text-dim);padding:14px 16px;
-  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-}
+/* MENTORSHIP */
+.mentor{position:relative}
+.mentor::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.mentor .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,64px);align-items:center}
+.mentor-topics{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.mentor-topics span{font-family:var(--mono);font-size:13px;color:var(--text-dim);padding:16px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:all .3s}
+.mentor-topics span:hover{color:var(--text);background:var(--surface-hover)}
 @media (max-width:860px){.mentor .wrap{grid-template-columns:1fr}.mentor-topics{grid-template-columns:1fr 1fr}}
 
-/* ============ PROCESS ============ */
-.process-row{display:flex;flex-direction:column}
-.pstep{
-  display:grid;grid-template-columns:90px 1fr 2fr;gap:24px;align-items:baseline;
-  padding:28px 0;border-bottom:1px solid var(--line);
-}
-.pstep:first-child{border-top:1px solid var(--line)}
-.pstep .pnum{font-family:var(--mono);color:var(--orange);font-size:13px}
-.pstep h3{font-size:clamp(18px,2vw,22px)}
-.pstep p{color:var(--text-dim);font-size:14.5px;max-width:520px}
-@media (max-width:760px){.pstep{grid-template-columns:1fr;gap:8px}}
+/* PROCESS */
+.process-row{display:flex;flex-direction:column;position:relative}
+.process-row::before{content:'';position:absolute;left:45px;top:0;bottom:0;width:1px;background:var(--border)}
+.pstep{display:grid;grid-template-columns:90px 1fr 2fr;gap:28px;align-items:baseline;padding:32px 0;border-bottom:1px solid var(--border);position:relative}
+.pstep:first-child{border-top:1px solid var(--border)}
+.pstep .pnum{font-family:var(--mono);color:var(--orange);font-size:13px;font-weight:500;width:36px;height:36px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:1}
+.pstep h3{font-size:clamp(20px,2.2vw,24px)}
+.pstep p{color:var(--text-dim);font-size:15px;max-width:520px;line-height:1.65}
+@media (max-width:760px){.process-row::before{left:18px}.pstep{grid-template-columns:50px 1fr;gap:12px}.pstep p{grid-column:2}}
 
-/* ============ WHY ============ */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.why-item{padding:32px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.why-item .wtag{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:.08em;margin-bottom:12px}
-.why-item p{color:var(--text-dim);font-size:14px}
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.why-item{padding:40px 32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:all .4s}
+.why-item:hover{background:var(--surface-hover)}
+.why-item .wtag{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:.1em;margin-bottom:14px;text-transform:uppercase}
+.why-item p{color:var(--text-dim);font-size:15px;line-height:1.7}
 @media (max-width:860px){.why-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.why-grid{grid-template-columns:1fr}}
 
-/* ============ PROOF / PLACEHOLDER ============ */
-.proof-box{border:1px dashed var(--line);padding:clamp(32px,5vw,56px);text-align:center}
-.proof-box .eyebrow{justify-content:center}
-.proof-box p{color:var(--text-faint);max-width:480px;margin:14px auto 0;font-size:14px}
-
-/* ============ CONTACT ============ */
-.contact{background:var(--bg-alt)}
-.contact .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,72px)}
-.contact-copy .lead{margin-bottom:34px}
-.contact-detail{margin-top:40px;padding-top:26px;border-top:1px solid var(--line)}
-.contact-detail .row{display:flex;justify-content:space-between;padding:10px 0;font-family:var(--mono);font-size:13px;border-bottom:1px solid var(--line-soft)}
+/* CONTACT */
+.contact{background:var(--bg-raised);position:relative}
+.contact::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,5vw,80px)}
+.contact-copy .lead{margin-bottom:36px}
+.contact-detail{margin-top:48px;padding-top:32px;border-top:1px solid var(--border)}
+.contact-detail .row{display:flex;justify-content:space-between;padding:12px 0;font-family:var(--mono);font-size:13px;border-bottom:1px solid rgba(255,255,255,0.04)}
 .contact-detail .row span:first-child{color:var(--text-faint)}
 
-form{display:flex;flex-direction:column;gap:18px}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.field{display:flex;flex-direction:column;gap:8px}
-.field label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim)}
-.field input,.field select,.field textarea{
-  background:transparent;border:1px solid var(--line);color:var(--text);
-  padding:13px 14px;font-family:var(--sans);font-size:14.5px;
-}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange)}
-.field textarea{resize:vertical;min-height:100px}
-.field.opt label::after{content:' (optional)';color:var(--text-faint);text-transform:none;letter-spacing:0}
+form{display:flex;flex-direction:column;gap:20px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px;position:relative}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-dim);transition:color .3s}
+.field input,.field select,.field textarea{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:14px 16px;font-family:var(--sans);font-size:15px;border-radius:2px;transition:all .3s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange);outline:none;box-shadow:0 0 0 3px var(--orange-soft)}
+.field textarea{resize:vertical;min-height:110px;line-height:1.6}
+.field.opt label::after{content:' (optional)';color:var(--text-faint);text-transform:none;letter-spacing:0;font-size:10px}
 @media (max-width:760px){.contact .wrap{grid-template-columns:1fr}.frow{grid-template-columns:1fr}}
-.form-note{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);margin-top:6px}
+.form-note{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);margin-top:8px;line-height:1.5}
 
-/* ============ FOOTER ============ */
-footer{padding:56px 0 34px;border-top:1px solid var(--line)}
-.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-soft)}
+/* FOOTER */
+footer{padding:64px 0 40px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--border)}
 .foot-brand{display:flex;align-items:center;gap:12px}
-.foot-brand img{height:26px}
-.foot-brand .tag{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);margin-top:6px}
-.foot-cols{display:flex;gap:64px;flex-wrap:wrap}
-.foot-col h4{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);margin-bottom:16px}
-.foot-col a{display:block;font-size:14px;color:var(--text-dim);padding:6px 0}
+.foot-brand img{height:28px;border-radius:2px}
+.foot-brand .tag{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin-top:6px;letter-spacing:.02em}
+.foot-cols{display:flex;gap:72px;flex-wrap:wrap}
+.foot-col h4{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);margin-bottom:18px}
+.foot-col a{display:block;font-size:14.5px;color:var(--text-dim);padding:7px 0;transition:color .3s;position:relative}
+.foot-col a::after{content:'';position:absolute;left:0;bottom:6px;height:1px;width:0;background:var(--orange);transition:width .3s var(--ease)}
 .foot-col a:hover{color:var(--orange)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:26px}
+.foot-col a:hover::after{width:100%}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:32px}
 .foot-bottom p{font-family:var(--mono);font-size:11.5px;color:var(--text-faint)}
-.foot-social{display:flex;gap:20px;font-family:var(--mono);font-size:11.5px}
-.foot-social a{color:var(--text-dim)}
+.foot-social{display:flex;gap:24px;font-family:var(--mono);font-size:12px}
+.foot-social a{color:var(--text-dim);transition:color .3s;position:relative}
 .foot-social a:hover{color:var(--orange)}
 
-/* ============ MOTION SYSTEM ============
-   Reveal        - fade + rise, default for most blocks
-   RevealLeft    - fade + slide from the left, for copy stacks
-   RevealImg     - fade + gentle scale-down, for imagery/visual panels
-   Stagger is applied per-item via inline transition-delay set in JS
-================================================= */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-.reveal-left{opacity:0;transform:translateX(-22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.reveal-left.in{opacity:1;transform:none}
-.reveal-img{opacity:0;transform:scale(1.05);transition:opacity .9s var(--ease),transform 1s var(--ease)}
-.reveal-img.in{opacity:1;transform:scale(1)}
-.stagger>*:nth-child(1){transition-delay:0s}
-.stagger>*:nth-child(2){transition-delay:.08s}
-.stagger>*:nth-child(3){transition-delay:.16s}
-.stagger>*:nth-child(4){transition-delay:.24s}
-.stagger>*:nth-child(5){transition-delay:.32s}
-.stagger>*:nth-child(6){transition-delay:.40s}
-.stagger>*:nth-child(7){transition-delay:.48s}
-.stagger>*:nth-child(8){transition-delay:.56s}
-.stagger>*:nth-child(9){transition-delay:.64s}
-.stagger>*:nth-child(10){transition-delay:.72s}
-.stagger>*:nth-child(11){transition-delay:.80s}
-.stagger>*:nth-child(12){transition-delay:.88s}
+/* WHATSAPP FAB */
+.wa-fab{position:fixed;z-index:90;bottom:calc(24px + env(safe-area-inset-bottom,0px));right:calc(24px + env(safe-area-inset-right,0px));background:var(--orange);color:#000;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 0 0 rgba(255,90,31,.4);opacity:0;transform:scale(.6) translateY(20px);transition:all .5s var(--ease) .6s;animation:pulse-ring 3s infinite}
+@keyframes pulse-ring{0%{box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 0 0 rgba(255,90,31,.4)}70%{box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 0 12px rgba(255,90,31,0)}100%{box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 0 0 rgba(255,90,31,0)}}
+.wa-fab.in{opacity:1;transform:scale(1) translateY(0)}
+.wa-fab:hover{transform:scale(1.08);background:#ff6b35}
+.wa-fab:active{transform:scale(.95)}
+.wa-fab svg{width:28px;height:28px}
+@media (max-width:480px){.wa-fab{width:54px;height:54px;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:calc(18px + env(safe-area-inset-right,0px))}.wa-fab svg{width:24px;height:24px}}
 
-/* whatsapp fab */
-.wa-fab{
-  position:fixed;z-index:90;
-  bottom:calc(22px + env(safe-area-inset-bottom,0px));
-  right:calc(22px + env(safe-area-inset-right,0px));
-  background:var(--orange);color:#0a0a09;width:56px;height:56px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4);
-  opacity:0;transform:scale(.6);transition:opacity .5s var(--ease) .8s,transform .5s var(--ease) .8s,box-shadow .25s ease;
-}
-.wa-fab.in{opacity:1;transform:scale(1)}
-.wa-fab:hover{box-shadow:0 10px 28px -4px rgba(255,90,31,.6);transform:scale(1.06)}
-.wa-fab:active{transform:scale(.96)}
-@media (max-width:480px){.wa-fab{width:50px;height:50px;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:calc(16px + env(safe-area-inset-right,0px))}.wa-fab svg{width:22px;height:22px}}
-.wa-fab svg{width:26px;height:26px}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+.reveal-left.in{opacity:1;transform:none}
+.reveal-img{opacity:0;transform:scale(1.08);transition:opacity 1s var(--ease-out),transform 1.2s var(--ease-out)}
+.reveal-img.in{opacity:1;transform:scale(1)}
+.reveal-scale{opacity:0;transform:scale(.95);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.reveal-scale.in{opacity:1;transform:scale(1)}
+.stagger>*:nth-child(1){transition-delay:0s}
+.stagger>*:nth-child(2){transition-delay:.1s}
+.stagger>*:nth-child(3){transition-delay:.2s}
+.stagger>*:nth-child(4){transition-delay:.3s}
+.stagger>*:nth-child(5){transition-delay:.4s}
+.stagger>*:nth-child(6){transition-delay:.5s}
+@media (prefers-reduced-motion:reduce){.reveal,.reveal-left,.reveal-img,.reveal-scale{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
-<header>
+<div class="cursor-wrap"><div class="cursor" id="cursor"></div><div class="cursor-dot" id="cursorDot"></div></div>
+
+<header id="mainHeader">
   <div class="wrap nav">
-    <a href="#top" class="brand">
-      <img src="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg" alt="BrandFuel logo">
-    </a>
+    <a href="#top" class="brand magnetic"><img src="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg" alt="BrandFuel"><span>BrandFuel</span></a>
     <nav class="navlinks">
-      <a href="#services">Services</a>
-      <a href="#about">Founder</a>
-      <a href="#case-study">Case Study</a>
-      <a href="#mentorship">Mentorship</a>
-      <a href="#contact">Contact</a>
+      <a href="#services" class="magnetic">Services</a>
+      <a href="#about" class="magnetic">Founder</a>
+      <a href="#case-study" class="magnetic">Case Study</a>
+      <a href="#mentorship" class="magnetic">Mentorship</a>
+      <a href="#contact" class="magnetic">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-solid nav-cta">Talk to BrandFuel</a>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <div class="mm-top">
-      <img src="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg" alt="BrandFuel logo">
-    </div>
-    <nav class="mm-links">
-      <a href="#services"><span class="mm-num">01</span>Services</a>
-      <a href="#about"><span class="mm-num">02</span>Founder</a>
-      <a href="#case-study"><span class="mm-num">03</span>Case Studies</a>
-      <a href="#mentorship"><span class="mm-num">04</span>Mentorship</a>
-      <a href="#contact"><span class="mm-num">05</span>Contact</a>
-    </nav>
-    <div class="cta-row"><a href="#contact" class="btn btn-solid" style="width:100%">Talk to BrandFuel <span class="btn-arrow">&#8594;</span></a></div>
+    <a href="#contact" class="btn btn-solid nav-cta magnetic">Talk to BrandFuel</a>
+    <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mm-links">
+    <a href="#services" class="mm-link"><span class="mm-num">01</span>Services</a>
+    <a href="#about" class="mm-link"><span class="mm-num">02</span>Founder</a>
+    <a href="#case-study" class="mm-link"><span class="mm-num">03</span>Case Studies</a>
+    <a href="#mentorship" class="mm-link"><span class="mm-num">04</span>Mentorship</a>
+    <a href="#contact" class="mm-link"><span class="mm-num">05</span>Contact</a>
+  </nav>
+  <div class="mm-cta"><a href="#contact" class="btn btn-solid" style="width:100%">Talk to BrandFuel <span class="btn-arrow">&#8594;</span></a></div>
+</div>
+
 <main id="top">
 
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <div class="eyebrow">Growth &amp; Digital Transformation Partner</div>
-      <h1 class="h1">Fueling brands<br>for <em>real</em> growth.</h1>
-      <p class="lead">Growth strategy, performance marketing, marketplaces and technology — built around how your business actually operates, not around a generic playbook.</p>
-      <div class="cta-row">
-        <a href="#contact" class="btn btn-solid">Talk to BrandFuel <span class="btn-arrow">&#8594;</span></a>
-        <a href="#services" class="btn btn-ghost">Explore Our Services</a>
+      <div class="eyebrow reveal">Growth &amp; Digital Transformation Partner</div>
+      <h1 class="h1 reveal">Fueling brands<br>for <em>real</em> growth.</h1>
+      <p class="lead reveal">Growth strategy, performance marketing, marketplaces and technology — built around how your business actually operates, not around a generic playbook.</p>
+      <div class="cta-row reveal">
+        <a href="#contact" class="btn btn-solid magnetic">Talk to BrandFuel <span class="btn-arrow">&#8594;</span></a>
+        <a href="#services" class="btn btn-ghost magnetic">Explore Our Services</a>
       </div>
     </div>
-    <div class="hero-frame">
+    <div class="hero-frame reveal-img">
       <img src="https://i.ibb.co/RG4c261m/IMG-20260201-WA0014.jpg" alt="Sufiyan Makwani, Founder of BrandFuel">
-      <span class="frame-mark tl"></span>
-      <span class="frame-mark br"></span>
-      <div class="frame-tag">
-        <div>
-          <div class="name">Sufiyan Makwani</div>
-          <div class="role">Founder, BrandFuel</div>
-        </div>
-        <div class="idnum">OP&#8209;01</div>
-      </div>
+      <span class="frame-mark tl"></span><span class="frame-mark br"></span>
+      <div class="frame-tag"><div><div class="name">Sufiyan Makwani</div><div class="role">Founder, BrandFuel</div></div><div class="idnum">OP&#8209;01</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ TRUST STRIP ============ -->
 <section class="section stats">
   <div class="wrap">
     <div class="stats-top reveal">Built from <span>experience.</span> Not just theory.</div>
     <div class="stat-grid stagger">
-      <div class="stat reveal">
-        <div class="num">8-Figure</div>
-        <div class="lbl">D2C Brand Built &amp; Operated</div>
-        <div class="gauge"><i style="width:92%"></i></div>
-      </div>
-      <div class="stat reveal">
-        <div class="num">1.5M<sup>+</sup></div>
-        <div class="lbl">Monthly Pinterest Views</div>
-        <div class="gauge"><i style="width:78%"></i></div>
-      </div>
-      <div class="stat reveal">
-        <div class="num">7.5K<sup>+</sup></div>
-        <div class="lbl">Facebook Community</div>
-        <div class="gauge"><i style="width:55%"></i></div>
-      </div>
-      <div class="stat reveal">
-        <div class="num">1,800<sup>+</sup></div>
-        <div class="lbl">LinkedIn Audience</div>
-        <div class="gauge"><i style="width:40%"></i></div>
-      </div>
+      <div class="stat reveal"><div class="num">8-Figure</div><div class="lbl">D2C Brand Built &amp; Operated</div><div class="bar" style="--w:92%"></div></div>
+      <div class="stat reveal"><div class="num">1.5M<sup>+</sup></div><div class="lbl">Monthly Pinterest Views</div><div class="bar" style="--w:78%"></div></div>
+      <div class="stat reveal"><div class="num">7.5K<sup>+</sup></div><div class="lbl">Facebook Community</div><div class="bar" style="--w:55%"></div></div>
+      <div class="stat reveal"><div class="num">1,800<sup>+</sup></div><div class="lbl">LinkedIn Audience</div><div class="bar" style="--w:40%"></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT / FOUNDER ============ -->
 <section class="section about" id="about">
   <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow">The Person Behind BrandFuel</div>
-      <h2 class="h2">An operator first.<br>A consultant second.</h2>
-    </div>
+    <div class="reveal"><div class="eyebrow">The Person Behind BrandFuel</div><h2 class="h2">An operator first.<br>A consultant second.</h2></div>
     <div class="about-copy reveal">
       <p>BrandFuel didn't start with a pitch deck. It started with a D2C fashion brand — EinayaCollection — that Sufiyan Makwani built and has run since 2019, without a co-founder to fall back on and without outside funding to soften the mistakes.</p>
-      <p class="pull">Running a brand teaches you things a marketing dashboard never will — what a stockout actually costs, why a "great" ad can still lose money, and how a slow website quietly erases a week of marketing spend.</p>
+      <div class="pull">Running a brand teaches you things a marketing dashboard never will — what a stockout actually costs, why a "great" ad can still lose money, and how a slow website quietly erases a week of marketing spend.</div>
       <p>That's the experience BrandFuel is built on: customer acquisition, advertising, marketplace operations, website conversion, and the day-to-day economics of a real consumer business. BrandFuel exists to bring that operator mindset to other founders — treating marketing, marketplaces and technology as one connected growth system, not three separate vendors.</p>
-      <div class="cta-row"><a href="#contact" class="btn btn-ghost">Work With Sufiyan <span class="btn-arrow">&#8594;</span></a></div>
+      <div class="cta-row"><a href="#contact" class="btn btn-ghost magnetic">Work With Sufiyan <span class="btn-arrow">&#8594;</span></a></div>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
 <section class="section" id="services">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">What We Do</div>
-      <h2 class="h2">Ten disciplines.<br>One growth system.</h2>
-      <p class="lead">Each service stands on its own. Together, they remove the gaps where most growth actually leaks — between marketing, marketplaces, and the technology holding it all together.</p>
-    </div>
-
-    <div class="svc-list" id="svcList">
-      <!-- items injected by JS from DATA below for consistency, or hardcoded -->
-    </div>
+    <div class="section-head reveal"><div class="eyebrow">What We Do</div><h2 class="h2">Ten disciplines.<br>One growth system.</h2><p class="lead">Each service stands on its own. Together, they remove the gaps where most growth actually leaks — between marketing, marketplaces, and the technology holding it all together.</p></div>
+    <div class="svc-list" id="svcList"></div>
   </div>
 </section>
 
-<!-- ============ WAYS TO WORK ============ -->
-<section class="section" style="border-top:1px solid var(--line-soft)">
+<section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Ways To Work With BrandFuel</div>
-      <h2 class="h2">Engagement models, not fixed menus.</h2>
-      <p class="lead">Every business is at a different stage. Engagements are structured around your objectives and execution requirements — not a one-size-fits-all package.</p>
-    </div>
+    <div class="section-head reveal"><div class="eyebrow">Ways To Work With BrandFuel</div><h2 class="h2">Engagement models, not fixed menus.</h2><p class="lead">Every business is at a different stage. Engagements are structured around your objectives and execution requirements — not a one-size-fits-all package.</p></div>
     <div class="model-grid stagger">
-      <div class="model reveal">
-        <div class="tag">FOUNDATION</div>
-        <h3 class="h3">For brands establishing their digital growth engine.</h3>
-        <p>Getting the fundamentals right — tracking, storefront, first campaigns — before adding complexity.</p>
-      </div>
-      <div class="model reveal">
-        <div class="tag">GROWTH</div>
-        <h3 class="h3">For brands already generating revenue and looking to scale.</h3>
-        <p>Sharper acquisition, marketplace expansion, and the systems that let growth compound.</p>
-      </div>
-      <div class="model reveal">
-        <div class="tag">SCALE</div>
-        <h3 class="h3">For brands requiring integrated execution across channels.</h3>
-        <p>Marketing, marketplaces and technology run as one coordinated growth operation.</p>
-      </div>
-      <div class="model reveal">
-        <div class="tag">CUSTOM</div>
-        <h3 class="h3">For businesses needing a tailored growth + technology build.</h3>
-        <p>Bespoke scopes for brands with specific operational or technical requirements.</p>
-      </div>
+      <div class="model reveal"><div class="tag">Foundation</div><h3 class="h3">For brands establishing their digital growth engine.</h3><p>Getting the fundamentals right — tracking, storefront, first campaigns — before adding complexity.</p></div>
+      <div class="model reveal"><div class="tag">Growth</div><h3 class="h3">For brands already generating revenue and looking to scale.</h3><p>Sharper acquisition, marketplace expansion, and the systems that let growth compound.</p></div>
+      <div class="model reveal"><div class="tag">Scale</div><h3 class="h3">For brands requiring integrated execution across channels.</h3><p>Marketing, marketplaces and technology run as one coordinated growth operation.</p></div>
+      <div class="model reveal"><div class="tag">Custom</div><h3 class="h3">For businesses needing a tailored growth + technology build.</h3><p>Bespoke scopes for brands with specific operational or technical requirements.</p></div>
     </div>
-    <div class="cta-row reveal" style="margin-top:36px"><a href="#contact" class="btn btn-solid">Discuss Your Growth Plan <span class="btn-arrow">&#8594;</span></a></div>
+    <div class="cta-row reveal" style="margin-top:40px"><a href="#contact" class="btn btn-solid magnetic">Discuss Your Growth Plan <span class="btn-arrow">&#8594;</span></a></div>
   </div>
 </section>
 
-<!-- ============ CASE STUDY ============ -->
 <section class="section case" id="case-study">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Case Study — 01</div>
-      <h2 class="h2">AutoRemov</h2>
-    </div>
+    <div class="section-head reveal"><div class="eyebrow">Case Study — 01</div><h2 class="h2">AutoRemov</h2></div>
     <div class="case-card">
       <div class="case-info reveal-left">
         <div class="case-tag">AI-Powered Image Editing Platform</div>
         <p class="lead" style="margin-bottom:0">AutoRemov is an AI-powered image editing platform. BrandFuel worked on the growth side of the business — building and optimizing the paid acquisition engine behind its subscription growth.</p>
-        <div class="case-focus">
-          <span>Google Ads</span><span>YouTube Ads</span><span>Funnel Optimization</span>
-          <span>CAC Efficiency</span><span>Subscription Growth</span><span>Retargeting</span><span>Scaling Acquisition</span>
-        </div>
-        <a href="#contact" class="btn btn-ghost">Read Case Study <span class="btn-arrow">&#8594;</span></a>
+        <div class="case-focus"><span>Google Ads</span><span>YouTube Ads</span><span>Funnel Optimization</span><span>CAC Efficiency</span><span>Subscription Growth</span><span>Retargeting</span><span>Scaling Acquisition</span></div>
+        <a href="#contact" class="btn btn-ghost magnetic">Read Case Study <span class="btn-arrow">&#8594;</span></a>
       </div>
-      <div class="case-visual reveal-img">
-        <div class="cs-mark">AUTOREMOV</div>
-        <div class="cs-sub">FIG.01 — PAID ACQUISITION</div>
-      </div>
+      <div class="case-visual reveal-img"><div class="cs-mark">AUTOREMOV</div><div class="cs-sub">FIG.01 — PAID ACQUISITION</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ EINAYA PROOF ============ -->
 <section class="section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Skin In The Game</div>
-      <h2 class="h2">We built one too.</h2>
-      <p class="lead">Before BrandFuel advised anyone else, its founder built and scaled his own consumer brand. EinayaCollection isn't a client — it's proof of hands-on operating experience.</p>
-    </div>
+    <div class="section-head reveal"><div class="eyebrow">Skin In The Game</div><h2 class="h2">We built one too.</h2><p class="lead">Before BrandFuel advised anyone else, its founder built and scaled his own consumer brand. EinayaCollection isn't a client — it's proof of hands-on operating experience.</p></div>
     <div class="einaya">
       <div class="einaya-copy reveal-left">
         <div class="case-tag">EinayaCollection — Founder-Owned D2C Fashion Brand</div>
-        <p style="color:var(--text-dim)">Built independently by Sufiyan Makwani since 2019, EinayaCollection is an ethnic-wear D2C brand run end-to-end — sourcing, marketing, fulfilment and customer experience — with no external growth team to lean on.</p>
-        <div class="einaya-stats">
-          <div><div class="num">8-Fig.</div><div class="lbl">Store Scale</div></div>
-          <div><div class="num">1.5M+</div><div class="lbl">Pinterest Views/Mo</div></div>
-          <div><div class="num">@einaya<wbr>collection</div><div class="lbl">Instagram</div></div>
-        </div>
-        <a href="https://www.instagram.com/einayacollection" target="_blank" rel="noopener" class="btn btn-ghost">See the Brand <span class="btn-arrow">&#8594;</span></a>
+        <p style="color:var(--text-dim);line-height:1.7">Built independently by Sufiyan Makwani since 2019, EinayaCollection is an ethnic-wear D2C brand run end-to-end — sourcing, marketing, fulfilment and customer experience — with no external growth team to lean on.</p>
+        <div class="einaya-stats"><div><div class="num">8-Fig.</div><div class="lbl">Store Scale</div></div><div><div class="num">1.5M+</div><div class="lbl">Pinterest Views/Mo</div></div><div><div class="num">@einaya<wbr>collection</div><div class="lbl">Instagram</div></div></div>
+        <a href="https://www.instagram.com/einayacollection" target="_blank" rel="noopener" class="btn btn-ghost magnetic">See the Brand <span class="btn-arrow">&#8594;</span></a>
       </div>
       <div class="einaya-visual reveal-img"><span class="live">LIVE BRAND — OPERATED SINCE 2019</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ MENTORSHIP ============ -->
 <section class="section mentor" id="mentorship">
   <div class="wrap">
-    <div class="stagger">
+    <div>
       <div class="eyebrow reveal">Performance Marketing Mentorship</div>
       <h2 class="h2 reveal">Don't just learn ads.<br>Learn how growth<br>actually works.</h2>
-      <p class="lead reveal" style="margin:24px 0 32px">Built for people who want to become capable performance marketers — not people collecting another certificate. Practical, execution-oriented, and grounded in real account thinking.</p>
-      <div class="cta-row reveal"><a href="#contact" class="btn btn-solid">Explore Mentorship <span class="btn-arrow">&#8594;</span></a></div>
+      <p class="lead reveal" style="margin:28px 0 36px">Built for people who want to become capable performance marketers — not people collecting another certificate. Practical, execution-oriented, and grounded in real account thinking.</p>
+      <div class="cta-row reveal"><a href="#contact" class="btn btn-solid magnetic">Explore Mentorship <span class="btn-arrow">&#8594;</span></a></div>
     </div>
     <div class="mentor-topics reveal-img">
       <span>Meta Ads</span><span>Google Ads</span><span>Campaign Structure</span><span>Performance Analysis</span>
@@ -711,13 +453,9 @@ footer{padding:56px 0 34px;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<!-- ============ PROCESS ============ -->
 <section class="section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">How We Work</div>
-      <h2 class="h2">A sequence, followed in order.</h2>
-    </div>
+    <div class="section-head reveal"><div class="eyebrow">How We Work</div><h2 class="h2">A sequence, followed in order.</h2></div>
     <div class="process-row stagger">
       <div class="pstep reveal"><div class="pnum">01</div><h3>Understand</h3><p>We understand the business before recommending tactics — the model, the margins, the operational reality.</p></div>
       <div class="pstep reveal"><div class="pnum">02</div><h3>Diagnose</h3><p>We identify the actual growth bottleneck, which is rarely the channel everyone assumes it is.</p></div>
@@ -728,13 +466,9 @@ footer{padding:56px 0 34px;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<!-- ============ WHY BRANDFUEL ============ -->
 <section class="section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Why BrandFuel</div>
-      <h2 class="h2">What that operator mindset changes.</h2>
-    </div>
+    <div class="section-head reveal"><div class="eyebrow">Why BrandFuel</div><h2 class="h2">What that operator mindset changes.</h2></div>
     <div class="why-grid stagger">
       <div class="why-item reveal"><div class="wtag">Operator Mindset</div><p>Built from actually running a D2C business, not from advising one from the outside.</p></div>
       <div class="why-item reveal"><div class="wtag">Business First</div><p>We look beyond individual marketing channels to how the business actually makes money.</p></div>
@@ -745,59 +479,40 @@ footer{padding:56px 0 34px;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<!-- ============ SOCIAL PROOF PLACEHOLDER ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="proof-box reveal">
-      <div class="eyebrow">What Our Partners Say</div>
-      <p>Client testimonials are added here as engagements are completed and partners choose to share their experience. Nothing fabricated — only what's real.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
 <section class="section contact" id="contact">
   <div class="wrap">
     <div class="contact-copy reveal">
       <div class="eyebrow">Get In Touch</div>
       <h2 class="h2">Let's talk about your growth.</h2>
       <p class="lead">Tell us where your business is today, where you want to go, and what's stopping you from getting there.</p>
-      <a href="#" id="waDirectLink" target="_blank" rel="noopener" class="btn btn-solid">Start a Conversation on WhatsApp <span class="btn-arrow">&#8594;</span></a>
+      <a href="#" id="waDirectLink" target="_blank" rel="noopener" class="btn btn-solid magnetic">Start a Conversation on WhatsApp <span class="btn-arrow">&#8594;</span></a>
       <div class="contact-detail">
         <div class="row"><span>WhatsApp</span><span id="waNumberDisplay">—</span></div>
         <div class="row"><span>Instagram</span><span>@einayacollection</span></div>
         <div class="row"><span>Response Time</span><span>Within 24 hours</span></div>
       </div>
     </div>
-
     <form id="leadForm" class="reveal-left">
       <div class="frow">
-        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required></div>
-        <div class="field"><label for="f-email">Work Email</label><input id="f-email" name="email" type="email" required></div>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required placeholder="Your name"></div>
+        <div class="field"><label for="f-email">Work Email</label><input id="f-email" name="email" type="email" required placeholder="you@company.com"></div>
       </div>
       <div class="frow">
-        <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" required></div>
-        <div class="field"><label for="f-company">Company / Brand</label><input id="f-company" name="company" type="text" required></div>
+        <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" required placeholder="+91 98765 43210"></div>
+        <div class="field"><label for="f-company">Company / Brand</label><input id="f-company" name="company" type="text" required placeholder="Brand name"></div>
       </div>
       <div class="field"><label for="f-web">Website / Instagram</label><input id="f-web" name="web" type="text" placeholder="yourbrand.com or @yourhandle"></div>
       <div class="field">
         <label for="f-need">What do you need help with?</label>
         <select id="f-need" name="need">
-          <option>Performance Marketing</option>
-          <option>Marketplace Growth</option>
-          <option>Influencer Marketing</option>
-          <option>Website Development</option>
-          <option>Custom ERP / Business Software</option>
-          <option>Android App Development</option>
-          <option>SEO / AEO</option>
-          <option>Strategic Growth Consulting</option>
-          <option>Performance Marketing Mentorship</option>
-          <option>Not sure yet</option>
+          <option>Performance Marketing</option><option>Marketplace Growth</option><option>Influencer Marketing</option>
+          <option>Website Development</option><option>Custom ERP / Business Software</option><option>Android App Development</option>
+          <option>SEO / AEO</option><option>Strategic Growth Consulting</option><option>Performance Marketing Mentorship</option><option>Not sure yet</option>
         </select>
       </div>
       <div class="field opt"><label for="f-budget">Monthly Growth / Marketing Budget</label><input id="f-budget" name="budget" type="text" placeholder="e.g. ₹2–5L / month"></div>
-      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="msg" placeholder="A little context helps."></textarea></div>
-      <button type="submit" class="btn btn-solid" style="align-self:flex-start;margin-top:4px">Send to WhatsApp <span class="btn-arrow">&#8594;</span></button>
+      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="msg" placeholder="A little context helps us prepare for our conversation."></textarea></div>
+      <button type="submit" class="btn btn-solid magnetic" style="align-self:flex-start;margin-top:4px">Send to WhatsApp <span class="btn-arrow">&#8594;</span></button>
       <p class="form-note">Submitting opens WhatsApp with your details pre-filled as a message to BrandFuel. Nothing is sent automatically.</p>
     </form>
   </div>
@@ -805,40 +520,21 @@ footer{padding:56px 0 34px;border-top:1px solid var(--line)}
 
 </main>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <div class="foot-brand">
-          <img src="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg" alt="BrandFuel logo">
-        </div>
+        <div class="foot-brand"><img src="https://i.ibb.co/BHDbdtkb/IMG-20260828-WA0000.jpg" alt="BrandFuel"><span>BrandFuel</span></div>
         <div class="foot-brand tag">Fueling Brands For Growth</div>
       </div>
       <div class="foot-cols">
-        <div class="foot-col">
-          <h4>Site</h4>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#case-study">Case Studies</a>
-          <a href="#mentorship">Mentorship</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="foot-col">
-          <h4>Connect</h4>
-          <a href="#" id="footWaLink" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/einayacollection" target="_blank" rel="noopener">Instagram</a>
-          <a href="#">LinkedIn</a>
-        </div>
+        <div class="foot-col"><h4>Site</h4><a href="#services">Services</a><a href="#about">About</a><a href="#case-study">Case Studies</a><a href="#mentorship">Mentorship</a><a href="#contact">Contact</a></div>
+        <div class="foot-col"><h4>Connect</h4><a href="#" id="footWaLink" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/einayacollection" target="_blank" rel="noopener">Instagram</a><a href="#">LinkedIn</a></div>
       </div>
     </div>
     <div class="foot-bottom">
       <p>&copy; <span id="yr"></span> BrandFuel. All Rights Reserved.</p>
-      <div class="foot-social">
-        <a href="#">LinkedIn</a>
-        <a href="https://www.instagram.com/einayacollection" target="_blank" rel="noopener">Instagram</a>
-        <a href="#">Facebook</a>
-      </div>
+      <div class="foot-social"><a href="#">LinkedIn</a><a href="https://www.instagram.com/einayacollection" target="_blank" rel="noopener">Instagram</a><a href="#">Facebook</a></div>
     </div>
   </div>
 </footer>
@@ -847,128 +543,88 @@ footer{padding:56px 0 34px;border-top:1px solid var(--line)}
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.18 8.18 0 0 1-1.26-4.32c0-4.53 3.69-8.22 8.24-8.22 4.54 0 8.23 3.69 8.23 8.22 0 4.54-3.69 8.19-8.24 8.19zm4.51-6.16c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29z"/></svg>
 </a>
 
-<script id="bf-config">
-  // ===== CENTRAL CONFIG — edit here only =====
-  const CONFIG = {
-    whatsappNumber: "919595194355", // country code + number, no + or spaces
-    whatsappDefaultMessage: "Hi BrandFuel, I'd like to discuss a growth opportunity."
-  };
-</script>
 <script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
+const CONFIG={whatsappNumber:"919595194355",whatsappDefaultMessage:"Hi BrandFuel, I'd like to discuss a growth opportunity."};
 
-  // WhatsApp links
-  const waBase = `https://wa.me/${CONFIG.whatsappNumber}`;
-  const directWaUrl = `${waBase}?text=${encodeURIComponent(CONFIG.whatsappDefaultMessage)}`;
-  document.getElementById('waDirectLink').href = directWaUrl;
-  document.getElementById('footWaLink').href = directWaUrl;
-  document.getElementById('waFab').href = directWaUrl;
-  document.getElementById('waNumberDisplay').textContent = '+' + CONFIG.whatsappNumber.replace(/(\d{2})(\d{5})(\d{5})/, '$1 $2 $3');
+document.getElementById('yr').textContent=new Date().getFullYear();
 
-  // Hero load-in sequence + FAB entrance (fires once, independent of scroll)
-  window.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(() => {
-      document.body.classList.add('page-ready');
-      document.getElementById('waFab').classList.add('in');
-    });
+const waBase=`https://wa.me/${CONFIG.whatsappNumber}`;
+const directWaUrl=`${waBase}?text=${encodeURIComponent(CONFIG.whatsappDefaultMessage)}`;
+document.getElementById('waDirectLink').href=directWaUrl;
+document.getElementById('footWaLink').href=directWaUrl;
+document.getElementById('waFab').href=directWaUrl;
+document.getElementById('waNumberDisplay').textContent='+'+CONFIG.whatsappNumber.replace(/(\d{2})(\d{5})(\d{5})/,'$1 $2 $3');
+
+// Header scroll
+window.addEventListener('scroll',()=>{document.getElementById('mainHeader').classList.toggle('scrolled',window.scrollY>50)});
+
+// Mobile menu — 100% guaranteed working
+const burger=document.getElementById('burgerBtn');
+const menu=document.getElementById('mobileMenu');
+function openMenu(){menu.classList.add('active');burger.classList.add('active');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}
+function closeMenu(){menu.classList.remove('active');burger.classList.remove('active');burger.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+burger.addEventListener('click',()=>menu.classList.contains('active')?closeMenu():openMenu());
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('active'))closeMenu()});
+window.addEventListener('resize',()=>{if(window.innerWidth>=900&&menu.classList.contains('active'))closeMenu()});
+
+// Services
+const SERVICES=[
+  {t:"Performance Marketing",pos:"Turn advertising spend into measurable growth.",tags:["Meta Ads","Google Ads","Campaign Strategy","Performance Optimization","Retargeting","Funnel Optimization","Conversion Strategy","Creative Testing","Analytics & Tracking"]},
+  {t:"Marketplace Growth",pos:"Build visibility, conversion and revenue across the marketplaces that matter.",tags:["Amazon","Flipkart","Blinkit","Instamart","Marketplace Advertising","Catalog Optimization","Marketplace Operations","Conversion Optimization","Growth Strategy"]},
+  {t:"Influencer Marketing",pos:"Turn creator attention into brand demand.",tags:["Influencer Strategy","Creator Discovery","Campaign Planning","Creator Briefing","Campaign Execution","Performance Tracking","UGC Strategy"]},
+  {t:"Website Development",pos:"Your website should sell, not simply exist.",tags:["High-Converting Websites","D2C E-commerce Sites","Custom Storefronts","Landing Pages","Conversion-Focused UX","Analytics Integration","Third-Party Integrations"]},
+  {t:"Custom ERP & Business Software",pos:"Replace fragmented operations with systems built around your business.",tags:["Custom ERP","CRM","Order Management","Inventory Management","Warehouse Systems","Business Dashboards","Workflow Automation","Custom Internal Tools"]},
+  {t:"Android App Development",pos:"Purpose-built apps for how your business actually runs.",tags:["Business Apps","Customer Apps","E-commerce Apps","Internal Operations Apps","Custom Android Solutions"]},
+  {t:"SEO",pos:"Compounding visibility that doesn't stop when the ad budget does.",tags:["Technical SEO","On-Page SEO","Content Strategy","E-commerce SEO","Authority Building","Search Growth"]},
+  {t:"AEO — Answer Engine Optimization",pos:"Getting your brand cited by AI search — not just ranked by Google.",tags:["AI Search Visibility","Entity Optimization","Structured Content","Search + AI Discovery Strategy"]},
+  {t:"Strategic Growth Consulting",pos:"An outside operator's read on where growth is actually stuck.",tags:["Growth Strategy","Go-To-Market","D2C Strategy","Performance Audits","Marketplace Strategy","Funnel Strategy","Business Diagnostics"]},
+  {t:"Performance Marketing Mentorship",pos:"Practical, execution-first mentorship for people who want real skill — not another certificate.",tags:["Account Structure","Live Campaigns","Career Positioning","Agency & Freelance Execution"]},
+];
+const svcList=document.getElementById('svcList');
+SERVICES.forEach((s,i)=>{
+  const item=document.createElement('div');
+  item.className='svc-item reveal';
+  item.style.transitionDelay=(Math.min(i,6)*0.06)+'s';
+  const numStr=String(i+1).padStart(2,'0');
+  item.innerHTML=`<div class="svc-head"><div class="svc-num">${numStr}</div><div class="svc-title">${s.t}</div><div class="svc-pos">${s.pos}</div><div class="svc-icon"></div></div><div class="svc-body"><div class="svc-body-in"><div></div><div class="fill"><div class="svc-tagline">${s.pos}</div></div><div class="fill"><div class="svc-tags">${s.tags.map(t=>`<span>${t}</span>`).join('')}</div></div></div></div>`;
+  const head=item.querySelector('.svc-head');
+  const body=item.querySelector('.svc-body');
+  head.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    svcList.querySelectorAll('.svc-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.svc-body').style.maxHeight=null});
+    if(!isOpen){item.classList.add('open');body.style.maxHeight=body.scrollHeight+'px'}
   });
+  svcList.appendChild(item);
+});
 
-  // Mobile menu — full-screen overlay, body scroll lock, burger<->X morph
-  const burger = document.getElementById('burgerBtn');
-  const menu = document.getElementById('mobileMenu');
-  function openMenu(){
-    menu.classList.add('open');
-    burger.classList.add('active');
-    burger.setAttribute('aria-expanded','true');
-    menu.setAttribute('aria-hidden','false');
-    document.body.classList.add('menu-open');
-  }
-  function closeMenu(){
-    menu.classList.remove('open');
-    burger.classList.remove('active');
-    burger.setAttribute('aria-expanded','false');
-    menu.setAttribute('aria-hidden','true');
-    document.body.classList.remove('menu-open');
-  }
-  burger.addEventListener('click', () => menu.classList.contains('open') ? closeMenu() : openMenu());
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && menu.classList.contains('open')) closeMenu(); });
-  window.addEventListener('resize', () => { if(window.innerWidth >= 900 && menu.classList.contains('open')) closeMenu(); });
+// Scroll reveal
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.classList.contains('stat'))e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-img,.reveal-scale').forEach(el=>io.observe(el));
+document.querySelectorAll('.stat').forEach(el=>io.observe(el));
 
-  // Services data
-  const SERVICES = [
-    {t:"Performance Marketing", pos:"Turn advertising spend into measurable growth.", tags:["Meta Ads","Google Ads","Campaign Strategy","Performance Optimization","Retargeting","Funnel Optimization","Conversion Strategy","Creative Testing","Analytics & Tracking"]},
-    {t:"Marketplace Growth", pos:"Build visibility, conversion and revenue across the marketplaces that matter.", tags:["Amazon","Flipkart","Blinkit","Instamart","Marketplace Advertising","Catalog Optimization","Marketplace Operations","Conversion Optimization","Growth Strategy"]},
-    {t:"Influencer Marketing", pos:"Turn creator attention into brand demand.", tags:["Influencer Strategy","Creator Discovery","Campaign Planning","Creator Briefing","Campaign Execution","Performance Tracking","UGC Strategy"]},
-    {t:"Website Development", pos:"Your website should sell, not simply exist.", tags:["High-Converting Websites","D2C E-commerce Sites","Custom Storefronts","Landing Pages","Conversion-Focused UX","Analytics Integration","Third-Party Integrations"]},
-    {t:"Custom ERP & Business Software", pos:"Replace fragmented operations with systems built around your business.", tags:["Custom ERP","CRM","Order Management","Inventory Management","Warehouse Systems","Business Dashboards","Workflow Automation","Custom Internal Tools"]},
-    {t:"Android App Development", pos:"Purpose-built apps for how your business actually runs.", tags:["Business Apps","Customer Apps","E-commerce Apps","Internal Operations Apps","Custom Android Solutions"]},
-    {t:"SEO", pos:"Compounding visibility that doesn't stop when the ad budget does.", tags:["Technical SEO","On-Page SEO","Content Strategy","E-commerce SEO","Authority Building","Search Growth"]},
-    {t:"AEO — Answer Engine Optimization", pos:"Getting your brand cited by AI search — not just ranked by Google.", tags:["AI Search Visibility","Entity Optimization","Structured Content","Search + AI Discovery Strategy"]},
-    {t:"Strategic Growth Consulting", pos:"An outside operator's read on where growth is actually stuck.", tags:["Growth Strategy","Go-To-Market","D2C Strategy","Performance Audits","Marketplace Strategy","Funnel Strategy","Business Diagnostics"]},
-    {t:"Performance Marketing Mentorship", pos:"Practical, execution-first mentorship for people who want real skill — not another certificate.", tags:["Account Structure","Live Campaigns","Career Positioning","Agency & Freelance Execution"]},
-  ];
+// Custom cursor
+const cursor=document.getElementById('cursor');
+const cursorDot=document.getElementById('cursorDot');
+let mouseX=0,mouseY=0,cursorX=0,cursorY=0;
+document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY});
+function animateCursor(){cursorX+=(mouseX-cursorX)*0.15;cursorY+=(mouseY-cursorY)*0.15;cursor.style.left=cursorX+'px';cursor.style.top=cursorY+'px';cursorDot.style.left=mouseX+'px';cursorDot.style.top=mouseY+'px';requestAnimationFrame(animateCursor)}
+animateCursor();
+document.querySelectorAll('a,button,input,textarea,select,.svc-head').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'))});
 
-  const svcList = document.getElementById('svcList');
-  SERVICES.forEach((s,i) => {
-    const item = document.createElement('div');
-    item.className = 'svc-item reveal';
-    item.style.transitionDelay = (Math.min(i,6) * 0.06) + 's';
-    const numStr = String(i+1).padStart(2,'0');
-    item.innerHTML = `
-      <div class="svc-head">
-        <div class="svc-num">${numStr}</div>
-        <div class="svc-title">${s.t}</div>
-        <div class="svc-pos">${s.pos}</div>
-        <div class="svc-plus">+</div>
-      </div>
-      <div class="svc-body">
-        <div class="svc-body-in">
-          <div></div>
-          <div class="fill">
-            <div class="svc-tagline">${s.pos}</div>
-          </div>
-          <div class="fill">
-            <div class="svc-tags">${s.tags.map(t=>`<span>${t}</span>`).join('')}</div>
-          </div>
-        </div>
-      </div>`;
-    const head = item.querySelector('.svc-head');
-    const body = item.querySelector('.svc-body');
-    head.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
-      svcList.querySelectorAll('.svc-item.open').forEach(o => { o.classList.remove('open'); o.querySelector('.svc-body').style.maxHeight = null; });
-      if(!isOpen){ item.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
-    });
-    svcList.appendChild(item);
-  });
+// Magnetic effect
+document.querySelectorAll('.magnetic').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();const x=e.clientX-r.left-r.width/2;const y=e.clientY-r.top-r.height/2;el.style.transform=`translate(${x*0.15}px,${y*0.15}px)`});el.addEventListener('mouseleave',()=>{el.style.transform=''})});
 
-  // Scroll reveal — observes Reveal / RevealLeft / RevealImg utilities
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-img').forEach(el => io.observe(el));
+// WhatsApp form
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target;
+  const lines=["Hi BrandFuel,","I'd like to discuss a growth opportunity.","",`Name: ${f.name.value}`,`Company: ${f.company.value}`,`Email: ${f.email.value}`,`Phone: ${f.phone.value}`,`Website/Instagram: ${f.web.value||'-'}`,`Requirement: ${f.need.value}`,`Budget: ${f.budget.value||'-'}`,`Message: ${f.msg.value||'-'}`];
+  window.open(`${waBase}?text=${encodeURIComponent(lines.join("\n"))}`,'_blank');
+});
 
-  // Lead form -> WhatsApp
-  document.getElementById('leadForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const f = e.target;
-    const lines = [
-      "Hi BrandFuel,",
-      "I'd like to discuss a growth opportunity.",
-      "",
-      `Name: ${f.name.value}`,
-      `Company: ${f.company.value}`,
-      `Email: ${f.email.value}`,
-      `Phone: ${f.phone.value}`,
-      `Website/Instagram: ${f.web.value || '-'}`,
-      `Requirement: ${f.need.value}`,
-      `Budget: ${f.budget.value || '-'}`,
-      `Message: ${f.msg.value || '-'}`
-    ];
-    const msg = encodeURIComponent(lines.join("\n"));
-    window.open(`${waBase}?text=${msg}`, '_blank');
-  });
+// FAB entrance
+setTimeout(()=>document.getElementById('waFab').classList.add('in'),800);
 </script>
 </body>
 </html>
